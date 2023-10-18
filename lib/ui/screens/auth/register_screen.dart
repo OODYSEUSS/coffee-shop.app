@@ -1,6 +1,11 @@
+import 'package:coffee_shop_app/ui/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:z73_1/core/auth/registration.dart';
-import 'package:z73_1/ui/pages/auth/login.dart';
+
+final emailControllerReg = TextEditingController();
+final passwordControllerReg = TextEditingController();
+final confirmPasswordControllerReg = TextEditingController();
+
+void signUserUp() {}
 
 class Register extends StatelessWidget {
   Register({super.key});
@@ -10,11 +15,10 @@ class Register extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          //верхняя шапка
           Stack(
             children: [
               Image.asset(
-                'assets/images/top_cap2.PNG',
+                'assets/images/top_cap2.png',
                 fit: BoxFit.fitWidth,
               ),
               Positioned(
@@ -36,7 +40,6 @@ class Register extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          // написать текст 'Register'
           const Text(
             'Register',
             style: TextStyle(
@@ -49,7 +52,6 @@ class Register extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          // texfield email
           MyTextField(
               controller: emailControllerReg,
               hintText: 'Email',
@@ -57,7 +59,6 @@ class Register extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          // textfield password
           MyTextField(
               controller: passwordControllerReg,
               hintText: 'Password',
@@ -65,7 +66,6 @@ class Register extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          // textfield confirm password
           MyTextField(
               controller: confirmPasswordControllerReg,
               hintText: 'Confirm password',
@@ -73,10 +73,9 @@ class Register extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          // elevatedbutton Sign Up
           MyButton(
             onPressed: () {
-              signUserUp(context);
+              signUserUp();
             },
             text: 'Sign Up',
           ),
@@ -95,29 +94,22 @@ class Register extends StatelessWidget {
           const SizedBox(
             height: 39,
           ),
-          // кнопки для регистрации с помощью гугла и эпла
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MyImageButton(
-                  imagePath:
-                      '/Library/flutter_projects/z73_1/assets/images/google.png',
-                  onTap: () {}),
+                  imagePath: 'assets/images/google.png', onTap: () {}),
               const SizedBox(
                 width: 20,
               ),
-              MyImageButton(
-                  imagePath:
-                      '/Library/flutter_projects/z73_1/assets/images/apple.png',
-                  onTap: () {}),
+              MyImageButton(imagePath: 'assets/images/apple.png', onTap: () {}),
             ],
           ),
-          const Spacer(), // добавил пространство для выравнивания последней картинки
+          const Spacer(),
           Align(
-            // а этой хуйней выровнял картинку по нижнему левому краю
             alignment: Alignment.bottomLeft,
             child: Image.asset(
-              'assets/images/bottom_cap.PNG',
+              'assets/images/bottom_cap.png',
               fit: BoxFit.fitWidth,
             ),
           ),

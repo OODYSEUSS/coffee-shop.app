@@ -1,17 +1,10 @@
+import 'package:coffee_shop_app/ui/screens/anboarding/anboarding_screen.dart';
+import 'package:coffee_shop_app/ui/screens/auth/login_screen.dart';
+import 'package:coffee_shop_app/ui/screens/auth/register_screen.dart';
+import 'package:coffee_shop_app/ui/screens/home/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:z73_1/ui/pages/anboardings/get_started.dart';
-import 'package:z73_1/ui/pages/auth/auth_page.dart';
-import 'package:z73_1/ui/pages/auth/login.dart';
-import 'package:z73_1/ui/pages/auth/register.dart';
-import 'package:z73_1/ui/pages/home/home_page.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+void main() {
   runApp(const Application());
 }
 
@@ -24,8 +17,7 @@ class Application extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
-          '/': (context) => const AuthPage(),
-          '/start': (context) => const GetStarted(),
+          '/': (context) => const GetStarted(),
           '/login': (context) => Login(),
           '/register': (context) => Register(),
           '/home': (context) => const HomePage(),

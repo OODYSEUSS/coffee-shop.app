@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/auth/authentication.dart';
+final emailController = TextEditingController();
+final passwordController = TextEditingController();
+
+void signUserIn() {}
 
 class Login extends StatefulWidget {
   Login({super.key});
@@ -10,8 +13,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  // контроллеры текстовых полей
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +23,7 @@ class _LoginState extends State<Login> {
             Stack(
               children: [
                 Image.asset(
-                  'assets/images/top_cap.PNG',
+                  'assets/images/top_cap.png',
                   fit: BoxFit.fitWidth,
                 ),
                 Positioned(
@@ -87,7 +88,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             MyButton(
-              onPressed: () => signUserIn(context),
+              onPressed: () => signUserIn(),
               text: 'Sign In',
             ),
             const SizedBox(
@@ -121,12 +122,11 @@ class _LoginState extends State<Login> {
                 ),
               ],
             ),
-            const Spacer(), // добавил пространство для выравнивания нижней шапки
+            const Spacer(),
             Align(
-              // а этой хуйней выровнял картинку по нижнему левому краю
               alignment: Alignment.bottomLeft,
               child: Image.asset(
-                'assets/images/bottom_cap.PNG',
+                'assets/images/bottom_cap.png',
                 fit: BoxFit.fitWidth,
               ),
             ),
