@@ -20,5 +20,25 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
+
 flutter:
-  uses-material-design: true  
+  uses-material-design: true
+  assets:
+    - assets/images/apple.png
+    - assets/images/bottom_cap.png
+    - assets/images/get_started.png
+    - assets/images/google.png
+    - assets/images/top_cap.png
+    - assets/images/top_cap2.png
+  fonts:
+    - family: Sora
+      fonts:
+        - asset: assets/fonts/Sora-Bold.ttf
+        - asset: assets/fonts/Sora-ExtraBold.ttf
+        - asset: assets/fonts/Sora-ExtraLight.ttf
+        - asset: assets/fonts/Sora-Light.ttf
+        - asset: assets/fonts/Sora-Medium.ttf
+        - asset: assets/fonts/Sora-Regular.ttf
+        - asset: assets/fonts/Sora-SemiBold.ttf
+        - asset: assets/fonts/Sora-Thin.ttf
+
